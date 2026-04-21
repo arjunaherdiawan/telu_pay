@@ -14,15 +14,16 @@ return new class extends Migration
         Schema::create('wallet', function(Blueprint $table) 
         {
 
-            $table->id();
-            $table->string ('wallet_id');
-            $table->string ('account_id');
+            $table->id('wallet_id')->unique();
+            $table->unsignedBigInteger('account_id');
             $table->foreign ('account_id')
                 ->references('account_id')
                 ->on('akun')
                 ->onDelete('cascade');
-            $table->decimal ('saldo');
+            $table->decimal('saldo', 16, 2)->default(0);
             $table->string ('mata_uang');
+            $table->dateTime('update_at');
+            $table->dateTime('created_at');
 
         });
     }

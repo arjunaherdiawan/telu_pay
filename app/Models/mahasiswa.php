@@ -6,11 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class mahasiswa extends Model
 {
+    protected $table = 'mahasiswa';
+    protected $primaryKey = 'id';
+    public $timestamps = true;
+
     protected $guarded = ['id'];
 
-    protected $table = ['mahasiswa'];
-
     protected $fillable = [
+        'student_id',
         'nim',
         'nama_lengkap',
         'email',
@@ -19,11 +22,19 @@ class mahasiswa extends Model
         'prodi',
     ];
 
+    // Mahasiswa has one Akun
     public function akun()
     {
-        return $this->hasOne(akun::class, 'account_id', 'account_id' );
+        return $this->hasOne(akun::class, 'student_id', 'student_id');
     }
-    public function getRouteKeyname(): string
+
+    // Mahasiswa has one ProfileBiometric
+    public function profileBiometric()
+    {
+        return $this->hasOne(ProfileBiometric::class, 'student_id', 'student_id');
+    }
+
+    public function getRouteKeyName(): string
     {
         return 'student_id';
     }

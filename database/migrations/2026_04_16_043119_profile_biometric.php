@@ -11,24 +11,28 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('akun', function(Blueprint $table) {
-            $table->id('account_id')->unique();
-            $table->string('student_id');
-            $table->foreign('student_id')
+        Schema::create('profile_biometric', function(Blueprint $table)
+        {
+            $table->id('biometric_id')->unique();
+            $table->string ('student_id');
+            $table->foreign ('student_id')
                 ->references('student_id')
                 ->on('mahasiswa')
                 ->onDelete('cascade');
             $table->string('username');
-            $table->string('password');
-            $table->timestamps();
+            $table->string('template_biometric');
+            $table->string('enrolled');
+            $table->enum('active', ['ACTIVE', 'INACTIVE']);
+            
+
         });
-    }   
+    }
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('akun');
+        //
     }
 };
