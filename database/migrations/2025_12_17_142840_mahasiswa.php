@@ -11,8 +11,7 @@ return new class extends Migration
     {
         schema::create('mahasiswa', function (Blueprint $table)
         {
-            $table->id();
-            $table->string('student_id')->unique();
+            $table->id('student_id')->unique();
             $table->string('nim');
             $table->string('nama_lengkap');
             $table->string('email');

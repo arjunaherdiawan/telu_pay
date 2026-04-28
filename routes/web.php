@@ -28,3 +28,11 @@ Route::get('/register', function () {
 Route::get('/dashboard', function () {
     return view('dashboard.dashboard_mahasiswa');
 });
+
+Route::get('/dashboard/merchant', function () {
+    return view('dashboard.dashboard_merchant');
+});
+
+Route::get('/merchant/profile', function () {
+    return view('dashboard.dashboard_merchant');  // placeholder, will be a separate page later
+});

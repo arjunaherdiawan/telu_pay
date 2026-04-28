@@ -7,13 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class mahasiswa extends Model
 {
     protected $table = 'mahasiswa';
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'student_id';
     public $timestamps = true;
 
-    protected $guarded = ['id'];
+    protected $guarded = ['student_id'];
 
     protected $fillable = [
-        'student_id',
         'nim',
         'nama_lengkap',
         'email',

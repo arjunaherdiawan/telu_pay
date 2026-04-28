@@ -14,7 +14,6 @@ class DatabaseSeeder extends Seeder
     {
         // 1. Data Dummy Mahasiswa
         $mhs1 = \App\Models\mahasiswa::create([
-            'student_id'   => '12345678',
             'nim'          => '12345678',
             'nama_lengkap' => 'Arjuna Juna',
             'email'        => 'juna@student.telkomuniversity.ac.id',
@@ -41,7 +40,6 @@ class DatabaseSeeder extends Seeder
         // 2. Data Dummy Merchant
         // Karena skema database memaksa 'akun' punya 'student_id', kita buat mahasiswa dummy untuk merchant
         $mhsMerchant = \App\Models\mahasiswa::create([
-            'student_id'   => 'M001',
             'nim'          => 'M001',
             'nama_lengkap' => 'Arjuna Merchant',
             'email'        => 'arjuna123@gmail.com',

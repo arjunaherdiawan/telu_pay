@@ -14,10 +14,9 @@ class akun extends Authenticatable
     protected $primaryKey = 'account_id';
     public $timestamps = false;
 
-    protected $guarded = ['id'];
+    protected $guarded = ['account_id'];
 
     protected $fillable = [
-        'account_id',
         'student_id',
         'username',
         'password',

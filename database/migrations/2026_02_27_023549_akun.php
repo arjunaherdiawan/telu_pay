@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('akun', function(Blueprint $table) {
             $table->id('account_id')->unique();
-            $table->string('student_id');
+            $table->unsignedBigInteger('student_id');
             $table->foreign('student_id')
                 ->references('student_id')
                 ->on('mahasiswa')

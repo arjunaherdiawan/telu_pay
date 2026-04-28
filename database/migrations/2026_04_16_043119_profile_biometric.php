@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('profile_biometric', function(Blueprint $table)
         {
             $table->id('biometric_id')->unique();
-            $table->string ('student_id');
+            $table->unsignedBigInteger('student_id');
             $table->foreign ('student_id')
                 ->references('student_id')
                 ->on('mahasiswa')

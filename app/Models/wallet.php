@@ -10,8 +10,9 @@ class wallet extends Model
     protected $primaryKey = 'wallet_id';
     public $timestamps = false;
 
+    protected $guarded = ['wallet_id'];
+
     protected $fillable = [
-        'wallet_id',
         'account_id',
         'saldo',
         'mata_uang',
