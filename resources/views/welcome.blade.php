@@ -63,16 +63,17 @@
                     <span class="text-xl font-bold tracking-tight text-gray-800">Telu-Pay</span>
                 </div>
                 
-                <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-gray-600">
-                    <a href="#" class="hover:text-telkom-red transition-colors">About</a>
-                    <a href="#" class="hover:text-telkom-red transition-colors">Contact</a>
-                </div>
-
-                <div class="flex items-center space-x-4">
-                    <a href="/register" class="text-sm font-semibold text-gray-600 hover:text-telkom-red px-4 py-2 hover:bg-gray-50 rounded-full transition-all">Sign up</a>
-                    <a href="/login" class="bg-telkom-red text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-red-100 hover:bg-telkom-maroon transition-all transform hover:-translate-y-0.5 active:translate-y-0">
-                        Sign in
-                    </a>
+                <div class="flex items-center space-x-8">
+                    <div class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-gray-600">
+                        <a href="#" class="hover:text-telkom-red transition-colors">About</a>
+                        <a href="#" class="hover:text-telkom-red transition-colors">Contact</a>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <a href="/register" class="text-sm font-semibold text-gray-600 hover:text-telkom-red px-4 py-2 hover:bg-gray-50 rounded-full transition-all">Sign up</a>
+                        <a href="/login" class="bg-telkom-red text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-red-100 hover:bg-telkom-maroon transition-all transform hover:-translate-y-0.5 active:translate-y-0">
+                            Sign in
+                        </a>
+                    </div>
                 </div>
             </div>
         </nav>

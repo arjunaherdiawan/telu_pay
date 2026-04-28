@@ -18,13 +18,13 @@ Route::get('/', function () {
 });
 
 Route::get('/login', function () {
-    return view('login');
+    return view('login.login');
 });
 
 Route::get('/register', function () {
-    return view('register');
+    return view('register.register');
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('dashboard.dashboard_mahasiswa');
 });

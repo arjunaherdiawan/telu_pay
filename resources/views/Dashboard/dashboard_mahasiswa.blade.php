@@ -81,19 +81,12 @@
 
     <!-- Quick Actions Card -->
     <div class="max-w-7xl mx-auto -mt-6 px-6">
-        <div class="bg-white rounded-3xl shadow-xl p-6 grid grid-cols-2 gap-6 border border-gray-100">
-            <button class="flex items-center justify-center space-x-4 bg-red-50 text-telkom-red p-4 rounded-2xl shadow-sm hover:bg-telkom-red hover:text-white transition-all duration-300 group">
+        <div class="bg-white rounded-3xl shadow-xl p-6 border border-gray-100">
+            <button class="w-full flex items-center justify-center space-x-4 bg-red-50 text-telkom-red p-4 rounded-2xl shadow-sm hover:bg-telkom-red hover:text-white transition-all duration-300 group">
                 <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-sm">
                     <i data-lucide="plus-circle" class="w-6 h-6"></i>
                 </div>
                 <span class="text-lg font-bold">Top Up</span>
-            </button>
-            
-            <button class="flex items-center justify-center space-x-4 bg-blue-50 text-blue-600 p-4 rounded-2xl shadow-sm hover:bg-blue-600 hover:text-white transition-all duration-300 group">
-                <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-sm">
-                    <i data-lucide="history" class="w-6 h-6"></i>
-                </div>
-                <span class="text-lg font-bold">Riwayat</span>
             </button>
         </div>
     </div>
@@ -150,21 +143,21 @@
     </div>
 
     <!-- Bottom Navigation -->
-    <nav class="fixed bottom-0 left-0 right-0 glass-nav border-t border-gray-100 px-10 py-4 flex items-center justify-between z-50 rounded-t-[30px] shadow-[0_-10px_30px_rgba(0,0,0,0.05)]">
-        <button class="flex flex-col items-center space-y-1 text-telkom-red group">
-            <i data-lucide="home" class="w-6 h-6 transition-transform group-hover:scale-110"></i>
-            <span class="text-[10px] font-bold uppercase tracking-widest">Home</span>
+    <nav class="fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md border-t border-gray-100 px-12 h-16 flex items-center justify-between z-50 shadow-[0_-10px_30px_rgba(0,0,0,0.05)]">
+        <button class="flex flex-col items-center justify-center space-y-1 text-gray-400 hover:text-telkom-red transition-all group w-16 h-full pt-1">
+            <i data-lucide="history" class="w-5 h-5 transition-transform group-hover:scale-110"></i>
+            <span class="text-[10px] font-bold uppercase tracking-widest">History</span>
         </button>
-        <button class="flex flex-col items-center space-y-1 text-gray-400 hover:text-telkom-red transition-all group">
-            <i data-lucide="layout-grid" class="w-6 h-6 transition-transform group-hover:scale-110"></i>
-            <span class="text-[10px] font-bold uppercase tracking-widest">Services</span>
+        
+        <button class="relative flex flex-col items-center justify-center w-16 h-full group">
+            <div class="absolute -top-6 bg-telkom-red text-white p-3.5 rounded-2xl shadow-xl shadow-red-200 group-hover:bg-telkom-maroon transition-all transform group-hover:-translate-y-1 duration-300 flex items-center justify-center">
+                <i data-lucide="home" class="w-6 h-6"></i>
+            </div>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-telkom-red absolute bottom-2">Home</span>
         </button>
-        <button class="flex flex-col items-center space-y-1 text-gray-400 hover:text-telkom-red transition-all group">
-            <i data-lucide="pie-chart" class="w-6 h-6 transition-transform group-hover:scale-110"></i>
-            <span class="text-[10px] font-bold uppercase tracking-widest">Riwayat</span>
-        </button>
-        <button class="flex flex-col items-center space-y-1 text-gray-400 hover:text-telkom-red transition-all group">
-            <i data-lucide="user" class="w-6 h-6 transition-transform group-hover:scale-110"></i>
+
+        <button class="flex flex-col items-center justify-center space-y-1 text-gray-400 hover:text-telkom-red transition-all group w-16 h-full pt-1">
+            <i data-lucide="user" class="w-5 h-5 transition-transform group-hover:scale-110"></i>
             <span class="text-[10px] font-bold uppercase tracking-widest">Profile</span>
         </button>
     </nav>
